@@ -1,23 +1,14 @@
-import logo from './logo.svg';
+
 import './App.css';
+import ComparisonTable from './ComparisonTable';
+import Header from './Header';
+import jsonData from './data.json';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header title={jsonData.pagetitle} subtitle={jsonData.pagesubtitle} />
+      <ComparisonTable data={jsonData} />
     </div>
   );
 }
